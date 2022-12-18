@@ -1,0 +1,13 @@
+<p>cars works!</p>
+
+<form>
+    <label>Car id:</label><br>
+    <input type="text" id="carId" #carId><br>
+    <label>Car Type:</label><br>
+    <input type="text" id="carName" #carName><br>
+    <button (click)="onAddCarClick(carId.value, carName.value)">Add Car</button>
+</form>
+<br> Cars List:
+<div *ngFor="let car of cars">
+    id = {{car.id}}, type = {{car.description}}, status = {{car.carStatus}}
+</div>
